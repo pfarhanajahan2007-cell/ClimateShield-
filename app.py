@@ -2,7 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 import requests
 from datetime import datetime
-import winsound
 
 st.set_page_config(page_title="ClimateShield Pro", page_icon="🌍", layout="wide")
 
@@ -126,7 +125,6 @@ try:
         message = f"**{title} — {level}**\n\n{advice}"
         if level == "High":
            st.error(message)
-           winsound.Beep(800,500)
 
         elif level == "Moderate":
            st.warning(message)
